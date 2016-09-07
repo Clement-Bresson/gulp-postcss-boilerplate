@@ -16,4 +16,8 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('default', ['styles'])
+gulp.task('watch', function () {
+  gulp.watch('src/styles/**/*.css', ['styles'])
+})
+
+gulp.task('default', ['styles', 'watch'])
